@@ -39,6 +39,7 @@ class MainActivity3 : AppCompatActivity() {
         tabLayout.setupWithViewPager(viewPager)
 
         tabLayout.getTabAt(0)!!.setIcon(R.drawable.baseline_groups_24)
+
     }
 
 
