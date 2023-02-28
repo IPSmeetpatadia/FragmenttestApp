@@ -9,7 +9,6 @@ import java.util.regex.Pattern
 
 class MainActivity5 : AppCompatActivity() {
 
-
     val PATTERN = Pattern.compile(
         "[A-Za-z]+[A-Za-z]+\\+?\\d+\\(?\\d+\\):[\\s\\S][A-Za-z]+[A-Za-z\\d]"
     )
@@ -28,7 +27,6 @@ class MainActivity5 : AppCompatActivity() {
             }
         }
     }
-
 
     fun isValidString(str: String): Boolean{
         return PATTERN.matcher(str).matches()
