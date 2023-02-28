@@ -27,7 +27,6 @@ class MainActivity5 : AppCompatActivity() {
                 Toast.makeText(this, "invalid", Toast.LENGTH_SHORT).show()
             }
         }
-
     }
 
 
