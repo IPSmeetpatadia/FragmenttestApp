@@ -9,7 +9,7 @@ import java.util.regex.Pattern
 
 class MainActivity5 : AppCompatActivity() {
 
-    val PATTERN = Pattern.compile(
+    private val PATTERN = Pattern.compile(
         "[A-Za-z]+[A-Za-z]+\\+?\\d+\\(?\\d+\\):[\\s\\S][A-Za-z]+[A-Za-z\\d]"
     )
 
