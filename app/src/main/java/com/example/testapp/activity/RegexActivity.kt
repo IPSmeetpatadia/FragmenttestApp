@@ -1,13 +1,14 @@
-package com.example.testapp
+package com.example.testapp.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.testapp.R
 import java.util.regex.Pattern
 
-class MainActivity5 : AppCompatActivity() {
+class RegexActivity : AppCompatActivity() {
 
     private val PATTERN = Pattern.compile(
         "[A-Za-z]+[A-Za-z]+\\+?\\d+\\(?\\d+\\):[\\s\\S][A-Za-z]+[A-Za-z\\d]"
@@ -15,7 +16,7 @@ class MainActivity5 : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main5)
+        setContentView(R.layout.activity_regex)
 
         val editText = findViewById<EditText>(R.id.editTextTextPersonName)
 
