@@ -1,12 +1,10 @@
 package com.example.testapp.activity
 
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import android.view.View
 import android.widget.Toast
 import androidx.cardview.widget.CardView
 import androidx.viewpager.widget.ViewPager
