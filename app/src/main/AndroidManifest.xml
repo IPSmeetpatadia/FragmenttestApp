@@ -33,7 +33,7 @@
             android:name=".activity.MainActivity"
             android:exported="false" />
         <activity
-            android:name=".activity.ImgFilterButtonActivity"
+            android:name=".activity.FabMenuActivity"
             android:exported="true"
             android:theme="@style/AppTheme">
             <intent-filter>

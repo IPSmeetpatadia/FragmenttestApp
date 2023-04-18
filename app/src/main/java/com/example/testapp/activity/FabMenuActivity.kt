@@ -6,13 +6,13 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import com.example.testapp.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class ImgFilterButtonActivity : AppCompatActivity() {
+class FabMenuActivity : AppCompatActivity() {
 
     private var isFabOpen = false
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_img_filter_button)
+        setContentView(R.layout.activity_fab_menu)
 
         val fbtn2 = findViewById<FloatingActionButton>(R.id.fbtn2)
         val fbtn3 = findViewById<FloatingActionButton>(R.id.fbtn3)
