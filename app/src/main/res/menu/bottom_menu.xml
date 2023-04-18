@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/menuHome"
+        android:icon="@drawable/baseline_home_24"
+        app:showAsAction="always"
+        android:title="Home" />
+    <item
+        android:id="@+id/menuEvents"
+        app:showAsAction="always"
+        android:icon="@drawable/baseline_event_24"
+        android:title="Events" />
+    <item
+        app:showAsAction="always"
+        android:id="@+id/nullmenu"
+        android:title="" />
+    <item
+        android:id="@+id/menuToDo"
+        app:showAsAction="always"
+        android:icon="@drawable/baseline_checklist_24"
+        android:title="To-Do" />
+    <item
+        android:id="@+id/menuSetting"
+        app:showAsAction="always"
+        android:icon="@drawable/baseline_settings_24"
+        android:title="Setting" />
+
+</menu>
