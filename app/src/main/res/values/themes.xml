@@ -31,4 +31,10 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+
+    <style name="FAB">
+        <item name="borderWidth">5dp</item>
+        <item name="backgroundTint">@color/black</item>
+    </style>
+
 </resources>

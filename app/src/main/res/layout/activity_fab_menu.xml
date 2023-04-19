@@ -12,22 +12,150 @@
         android:layout_height="match_parent"
         android:layout_above="@id/bottomAppBar" />
 
-    <com.google.android.material.bottomappbar.BottomAppBar
-        android:id="@+id/bottomAppBar"
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_13"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imgTitle"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/baseline_access_time_24"
+        android:layout_toLeftOf="@id/textTitle"
+        app:tint="@color/black" />
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TimeMaster"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/black"
+        android:textSize="30sp"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/txtGreetingDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="5dp"
+        android:text="Good Morning"
+        android:textColor="@color/black"
+        android:textSize="31dp"
+        android:textStyle="bold"
+        android:layout_below="@id/textTitle"
+        android:layout_toLeftOf="@id/txtUserName" />
+
+    <TextView
+        android:id="@+id/txtUserName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="10sp"
+        android:text="John"
+        android:textColor="@color/black"
+        android:textSize="31sp"
+        android:textStyle="bold"
+        android:layout_below="@id/textTitle"
+        android:layout_alignParentEnd="true"/>
+
+    <LinearLayout
+        android:id="@+id/abc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_gravity="bottom"
-        app:contentInsetStart="0dp"
-        tools:ignore="BottomAppBar">
+        android:layout_below="@id/txtGreetingDay"
+        android:layout_marginTop="3dp"
+        android:gravity="end"
+        android:paddingEnd="10dp">
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomMenuBar"
-            android:layout_width="match_parent"
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/baseline_cloud_queue_24"
+            app:tint="@color/black"/>
+
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:labelVisibilityMode="labeled"
-            app:menu="@menu/bottom_menu" />
-    </com.google.android.material.bottomappbar.BottomAppBar>
+            android:text="22° C"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginStart="5dp"/>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginStart="15dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Max: 28° C"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Min: 11° C"
+                android:textStyle="bold"
+                android:textColor="@color/black" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </LinearLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCreateEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:icon="@drawable/baseline_add_24"
+        android:text="Create Event"
+        android:textAllCaps="false"
+        android:backgroundTint="@color/black"
+        android:layout_below="@+id/abc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:padding="9dp"
+        app:cornerRadius="30dp"/>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/btnCreateEvent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txtUpcomingEvents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Upcoming Events"
+                android:textSize="18sp"
+                android:padding="5dp"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleViewUpcomingEvents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtUpcomingEvents" />
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutMenu"
@@ -35,7 +163,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp"
+        android:layout_marginBottom="10dp"
         android:background="@drawable/shape_top_corner"
         android:paddingStart="10dp"
         android:paddingTop="10dp"
@@ -48,9 +176,12 @@
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
-            android:backgroundTint="@color/white"
             android:src="@drawable/baseline_add_24"
             android:layout_margin="5dp"
+            app:elevation="2dp"
+            app:borderWidth="2dp"
+            android:visibility="invisible"
+            android:backgroundTint="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
@@ -61,7 +192,8 @@
             android:layout_height="wrap_content"
             android:src="@drawable/baseline_home_24"
             app:fabSize="normal"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/black"
+            app:tint="@android:color/white"
             app:borderWidth="0dp"
             app:elevation="0dp"
             app:layout_constraintCircle="@id/fbtn1"
@@ -75,7 +207,8 @@
             android:layout_height="wrap_content"
             android:src="@drawable/baseline_checklist_24"
             app:fabSize="normal"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/black"
+            app:tint="@android:color/white"
             app:borderWidth="0dp"
             app:elevation="0dp"
             app:layout_constraintCircle="@id/fbtn1"
@@ -88,8 +221,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/baseline_event_24"
+            app:tint="@android:color/white"
             app:fabSize="normal"
-            android:backgroundTint="@color/white"
+            android:backgroundTint="@color/black"
             app:borderWidth="0dp"
             app:elevation="0dp"
             app:layout_constraintCircle="@id/fbtn1"
@@ -98,5 +232,47 @@
             tools:ignore="MissingConstraints" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.bottomappbar.BottomAppBar
+        android:id="@+id/bottomAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        app:contentInsetStart="0dp"
+        tools:ignore="BottomAppBar">
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomMenuBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_menu"
+            app:fabCradleMargin="10dp"
+            app:fabAlignmentMode="center"
+            app:itemIconTint="@color/black"
+            app:itemTextColor="@color/black"
+            android:background="#d9d9d7"
+            app:fabCradleRoundedCornerRadius="20dp"
+            app:fabCradleVerticalOffset="10dp"/>
+
+
+    </com.google.android.material.bottomappbar.BottomAppBar>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        style="@style/FAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabCustomSize="70dp"
+        android:contentDescription="@string/app_name"
+        android:backgroundTint="@color/white"
+        app:layout_anchor="@id/bottomAppBar"
+        app:srcCompat="@drawable/baseline_add_24"
+        app:tint="@android:color/black"
+        android:layout_marginBottom="5dp"
+        app:maxImageSize="50dp"
+        android:scaleType="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
